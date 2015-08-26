@@ -1,7 +1,12 @@
-#test
+def loadDiamond():
+	f = open("./diamond", "+r")
+	if ( not f ):
+		return 0
+	print(f.read())
 
 def printDiamond(size):
 
+	loadDiamond()
 	if ( size % 2 == 0 ):
 		print ("you have to put in odd number")
 		return 0
@@ -24,14 +29,11 @@ def printDiamond(size):
 		print("")
 		output.write("\n")
 
-
-
-
 def main():
 	try:
 		size = int(input("put in the size > "))
 		printDiamond(size)
-	except:
+	except ValueError:
 		print("you have to put in integer")
 
 if __name__ == '__main__':
