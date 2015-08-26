@@ -1,3 +1,5 @@
+#test
+
 def printDiamond(size):
 
 	if ( size % 2 == 0 ):
